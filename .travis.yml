@@ -12,8 +12,8 @@ script:
 #- echo -e "Host 184.168.21.89\n\tStrictHostKeyChecking no\n" >> ~/.ssh/config
 #- ssh-add ./deploy_key
 #- ssh -i ./deploy_key pouncilt@184.168.21.89 pwd
-after_success:
-  - docker login -u ${DOCKER_USERNAME} -p ${DOCKER_USER_TOKEN}
+#after_success:
+#  - docker login -u ${DOCKER_USERNAME} -p ${DOCKER_USER_TOKEN}
 #  - echo "${SSH_KEY}" |  base64 --decode > /tmp/ssh_rsa
 #  - chmod 600 /tmp/ssh_rsa
 #  - ssh -o "StrictHostKeyChecking no" pouncilt@$184.168.21.89 -i /tmp/ssh_rsa "echo test > test.log"
